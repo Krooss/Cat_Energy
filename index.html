@@ -40,7 +40,12 @@
       <section class="overview">
         <h1 class="overview__title">Функциональное питание для котов</h1>
         <p class="overview__tagline">Занялся собой? Займись котом!</p>
-        <a href="" class="button"></a>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/product-photo-desktop.png">
+          <source media="(min-width: 768px)" srcset="img/product-photo-tablet.jpg">
+          <img src="img/product-photo-mobile.png" class="overview__picture" alt="Фото примера продукции Cat Energy">
+        </picture>
+        <a class="overview__button button" href="">Подобрать программу</a>
       </section>
     </div>
   </main>

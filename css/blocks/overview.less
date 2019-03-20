@@ -1,0 +1,132 @@
+.overview {
+  position: relative;
+  width: 100%;
+  padding-top: 28px;
+  color: white;
+}
+
+.overview__title {
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.overview__tagline {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.overview__picture {
+  position: absolute;
+  top: 167px;
+  left: 0;
+  z-index: -1;
+}
+
+.button {
+  display: block;
+  background-color: #68b738;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+  &:active {
+    background-color: #5eaa2f;
+    color: #8fc46e;
+  }
+}
+
+.overview__button {
+  margin-top: 303px;
+  padding: 11px 0;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.overview::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -20px;
+  width: 320px;
+  height: 305px;
+  background-image: url(../img/overview-background-mobile.jpg);
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+@media (min-width: @tablet-width) {
+  .overview {
+    min-height: 810px;
+    padding-top: 60px;
+    color: black;
+  }
+
+  .overview::before {
+    display: none;
+  }
+
+  .overview__title {
+    width: 427px;
+    margin-left: 90px;
+    margin-bottom: 45px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .overview__tagline {
+    width: 295px;
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .overview__button {
+    width: 245px;
+    margin-left: 90px;
+    margin-top: 50px;
+  }
+
+  .overview__picture {
+    top: 260px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .overview {
+    padding-top: 120px;
+  }
+
+  .overview__title,
+  .overview__tagline,
+  .overview__button {
+    margin-left: 80px;
+  }
+
+  .overview__picture {
+    top: 34px;
+    left: 440px;
+  }
+
+  .overview::before {
+    display: block;
+    left: 50%;
+    top: -115px;
+    width: 720px;
+    height: 696px;
+    background-image: url(../img/index-background-desktop.jpg);
+    background-repeat: no-repeat;
+  }
+
+}
