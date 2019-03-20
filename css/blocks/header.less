@@ -1,0 +1,138 @@
+.header .container {
+  position: relative;
+}
+
+.header__logo {
+  display: inline-block;
+  margin: 11px 0 16px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__nav-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header__nav--closed ~ .header__nav-toggle::before {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0 9px 0 0 black, 0 18px 0 0 black;
+}
+
+.header__nav--opened ~ .header__nav-toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header__nav-list {
+  text-align: center;
+}
+
+.header__nav-item a {
+  display: block;
+  padding: 23px 0;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #111111;
+  border-top: 1px solid #e6e6e6;
+}
+
+.header .container::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 280px;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__nav-list {
+    display: flex;
+    width: 440px;
+    margin-top: 31px;
+    justify-content: space-between;
+  }
+
+  .header__nav-item a {
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    border-top: none;
+  }
+
+  .header__nav-toggle {
+    display: none;
+  }
+
+  .header .container::after {
+    display: none;
+  }
+
+  .header__logo {
+    margin: 0;
+    margin-top: 24px;
+  }
+
+  .header__nav-item--active {
+    border-bottom: 2px solid #68b738;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__logo {
+    margin-top: 54px;
+  }
+
+  .header__nav-list {
+    margin-top: 60px;
+    width: 480px;
+  }
+
+  .header__nav-item a {
+    font-size: 20px;
+  }
+
+  .header__nav-item--active {
+    border-bottom: 2px solid white;
+  }
+}
