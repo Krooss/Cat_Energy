@@ -1,0 +1,94 @@
+.s-1, .s-2, .s-3, .s-4, .losingWeight-icon_mobile, .weightGain-icon_mobile, .losingWeight-icon_tablet, .weightGain-icon_tablet, .losingWeight-icon_desktop, .weightGain-icon_desktop, .advantage-1.png, .andvantage-2.png, .advantage-3.png, .advantage-4.png, .right-arrow{
+	background: url(sprites.png) no-repeat;
+}
+
+.s-1{
+	background-position: 0 0;
+	width: 71px;
+	height: 228px;
+}
+
+.s-2{
+	background-position: -79px 0;
+	width: 114px;
+	height: 230px;
+}
+
+.s-3{
+	background-position: -199px 0;
+	width: 113px;
+	height: 233px;
+}
+
+.s-4{
+	background-position: -323px 0;
+	width: 121px;
+	height: 228px;
+}
+
+.losingWeight-icon_mobile{
+	background-position: -456px 0;
+	width: 50px;
+	height: 53px;
+}
+
+.weightGain-icon_mobile{
+	background-position: -516px 0;
+	width: 67px;
+	height: 50px;
+}
+
+.losingWeight-icon_tablet{
+	background-position: 0 -251px ;
+	width: 200px;
+	height: 212px;
+}
+
+.weightGain-icon_tablet{
+	background-position: -207px -258px ;
+	width: 268px;
+	height: 200px;
+}
+
+.losingWeight-icon_desktop{
+	background-position: -540px -77px ;
+	width: 100px;
+	height: 106px;
+}
+
+.weightGain-icon_desktop{
+	background-position: -506px -202px ;
+	width: 134px;
+	height: 100px;
+}
+
+.advantage-1.png{
+	background-position: -505px -314px ;
+	width: 26px;
+	height: 29px;
+}
+
+.andvantage-2.png{
+	background-position: -551px -318px ;
+	width: 29px;
+	height: 31px;
+}
+
+.advantage-3.png{
+	background-position: -504px -358px ;
+	width: 23px;
+	height: 30px;
+}
+
+.advantage-4.png{
+	background-position: -554px -361px ;
+	width: 26px;
+	height: 31px;
+}
+
+.right-arrow{
+	background-position: -507px -414px ;
+	width: 33px;
+	height: 11px;
+}
+
