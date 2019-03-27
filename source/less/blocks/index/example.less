@@ -1,0 +1,373 @@
+.example {
+  background-color: #f2f2f2;
+  padding: 20px 0 40px;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: normal;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example__item-weight,
+.example__item-days {
+  position: relative;
+}
+
+.example__item-weight {
+  margin-right: 32px;
+}
+
+.example__value {
+  width: 122px;
+  margin: 0;
+  padding: 17px 0;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__text {
+  position: absolute;
+  top: 83%;
+  left: 18px;
+  box-sizing: border-box;
+  width: 87px;
+  margin: 0;
+  padding: 0 10px;
+  background-color: #f2f2f2;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.example__item-costs {
+  margin: 35px auto;
+}
+
+.example__money-spend {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.slider__toggle-before,
+.slider__toggle-after {
+  display: none;
+}
+
+.slider__slides {
+  position: relative;
+  min-height: 240px;
+  margin-bottom: 35px;
+}
+
+.slider__before,
+.slider__after {
+  display: none;
+  position: absolute;
+}
+
+.slider__after {
+  left: 30px;
+}
+
+.slider__control {
+  display: flex;
+}
+
+.slider__comparison-bar {
+  position: relative;
+  width: 82px;
+  height: 12px;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.slider__comparison-bar::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #68b738;
+}
+
+.slider__toggle-1,
+.slider__toggle-2 {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.slider__toggle-1 {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.slider__toggle-2 {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.slider__toggle-after:checked ~ .slider__control .slider__comparison-bar::after {
+  left: 42px;
+}
+
+.slider__toggle-before:checked ~ .slider__slides .slider__before {
+  display: block;
+}
+
+.slider__toggle-after:checked ~ .slider__slides .slider__after {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .example::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 460px;
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+    z-index: -1;
+  }
+
+  .example__title {
+    font-size: 60px;
+    margin-bottom: 65px;
+  }
+
+  .example__description {
+    width: 700px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 60px;
+  }
+
+  .example__item-weight {
+    margin-right: 42px;
+  }
+
+  .example__value {
+    width: 160px;
+    padding: 23px 0;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__text {
+    top: 88%;
+    background-color: white;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0;
+  }
+
+  .example__item-weight .example__text {
+    left: 24px;
+    width: 114px;
+  }
+
+  .example__item-days .example__text {
+    left: 9px;
+    width: 142px;
+  }
+
+  .example__item-costs {
+    margin: 15px 0 0 auto;
+  }
+
+  .example__money-spend {
+    width: 180px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .example__money-spend span {
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  .slider__slides {
+    min-height: 350px;
+    margin-top: 255px;
+  }
+
+  .slider__before,
+  .slider__after {
+    display: block;
+    bottom: 0;
+  }
+
+  .slider__before {
+    left: 15px;
+    clip: rect(auto, 340px, auto, auto);
+  }
+
+  .slider__after {
+    clip: rect(auto, auto, auto, 245px);
+    left: 110px;
+  }
+
+  .example__wrapper-2 {
+    padding-bottom: 68px;
+  }
+
+  .slider__comparison-bar {
+    width: 430px;
+    height: 6px;
+    margin: auto 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #dcdcdc;
+  }
+
+  .slider__comparison-bar::after {
+    top: -16px;
+    left: 51%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border: 12px solid white;
+    border-radius: 50%;
+    background-color: #68b738;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .slider__comparison-bar:hover::after {
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  .slider__toggle-1,
+  .slider__toggle-2 {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #bebebe;
+    }
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  .slider__toggle-after:checked ~ .slider__control .slider__comparison-bar::after {
+    left: 51%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    padding-bottom: 75px;
+  }
+
+  .example .container {
+    display: flex;
+  }
+
+  .example__wrapper-1 {
+    width: 570px;
+  }
+
+  .example__wrapper-2 {
+    width: 650px;
+    padding-bottom: 0;
+  }
+
+  .example__title {
+    margin-bottom: 150px;
+  }
+
+  .example__description {
+    width: 435px;
+    margin-bottom: 70px;
+  }
+
+  .example__list {
+    width: 370px;
+  }
+
+  .example__item-costs {
+    margin: 40px auto 0 0;
+  }
+
+  .example__money-spend {
+    width: 333px;
+  }
+
+  .example__money-spend span {
+    margin-left: 63px;
+  }
+
+  .example__text {
+    background-color: #f2f2f2;
+  }
+
+  .slider__slides {
+    min-height: 330px;
+    margin-top: 140px;
+    margin-bottom: 45px;
+  }
+
+  .slider__before {
+    left: 0;
+    clip: rect(auto, 353px, auto, auto);
+    z-index: 100;
+  }
+
+  .slider__after {
+    left: 80px;
+    bottom: -10px;
+    clip: rect(auto, auto, auto, 273px);
+  }
+
+  .slider__control {
+    width: 570px;
+    margin-left: 80px;
+  }
+
+  .slider__comparison-bar::after {
+    left: 48%;
+  }
+
+  .slider__toggle-after:checked ~ .slider__control .slider__comparison-bar::after {
+    left: 48%;
+  }
+
+  .example::after {
+    height: 485px;
+    background: linear-gradient(to right, #f2f2f2 74%, #eaeaea 74%);
+  }
+}
