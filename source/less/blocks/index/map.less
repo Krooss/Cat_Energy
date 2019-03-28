@@ -1,0 +1,86 @@
+.map {
+  position: relative;
+}
+
+.invitation {
+  display: flex;
+  padding: 30px 0;
+}
+
+.invitation__tagline,
+.invitation__address {
+  width: 140px;
+}
+
+.invitation__tagline {
+  color: #111111;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.invitation__address {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+}
+
+.map__iframe {
+  height: 362px;
+}
+
+.map__iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .invitation {
+    justify-content: space-between;
+    padding: 65px 42px;
+  }
+
+  .invitation__tagline,
+  .invitation__address {
+    width: 155px;
+  }
+
+  .invitation__tagline {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .invitation__address {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .invitation__address span {
+    display: inline-block;
+    margin-top: 25px;
+  }
+
+  .map__iframe {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .invitation {
+    position: absolute;
+    top: 96px;
+    width: 416px;
+    padding: 60px 77px;
+    background-color: white;
+  }
+
+  .invitation__address {
+    text-align: left;
+  }
+
+  .map__iframe {
+    height: 400px;
+  }
+}
