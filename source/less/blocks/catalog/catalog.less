@@ -1,0 +1,254 @@
+.catalog-page .map {
+  background-color: #f2f2f2;
+}
+
+.catalog__title {
+  position: relative;
+  margin: 0;
+  padding: 18px 0 25px;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: normal;
+}
+
+.catalog__title::after,
+.product-show-more::after,
+.product::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 320px;
+  height: 1px;
+  left: -20px;
+  background-color: #ededed;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product__name {
+  width: 75px;
+  margin: 22px 0 15px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.product__size,
+.product__taste,
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  margin: 5px 0 0;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.product__button {
+  width: 280px;
+  padding: 10px 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product-show-more {
+  position: relative;
+  padding: 80px 0 24px;
+}
+
+.product-show-more::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: 26px;
+  left: 125px;
+  background: url(../img/plus-mobile.png) no-repeat;
+  opacity: 0.2;
+}
+
+.product-show-more__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product-show-more__slogan {
+  margin: 0;
+  margin-bottom: 23px;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.product-show-more__button {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #444444;
+  background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+  &:active {
+    color: #b9b9b9;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__title {
+    font-size: 60px;
+    padding: 60px 0 24px;
+  }
+
+  .catalog__title::after,
+  .product-show-more::after,
+  .product::after {
+    display: none;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+
+  .product,
+  .product-show-more {
+    display: block;
+    box-sizing: border-box;
+    width: 324px;
+    height: 431px;
+    margin-top: 140px;
+    padding: 165px 37px 0;
+    background-color: #f2f2f2;
+  }
+
+  .product:nth-child(2n+1) {
+    margin-right: 60px;
+  }
+
+  .product__img {
+    position: absolute;
+    bottom: 304px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product__name {
+    width: 130px;
+    margin: 0;
+    margin-bottom: 19px;
+    padding: 0 60px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .product__size,
+  .product__taste,
+  .product__price {
+    width: 250px;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .product__button {
+    width: 250px;
+    margin: 0;
+    margin-top: 33px;
+  }
+
+  .product-show-more {
+    background-color: transparent;
+    border: 1px solid #e6e6e6;
+  }
+
+  .product-show-more::before {
+    width: 60px;
+    height: 60px;
+    top: 55px;
+    left: 133px;
+    background: url(../img/plus.png) no-repeat;
+    opacity: 0.2;
+  }
+
+  .product-show-more__title {
+    width: 134px;
+    padding: 0 58px;
+    font-size: 20px;
+    margin-bottom: 29px;
+  }
+
+  .product-show-more__slogan {
+    width: 169px;
+    padding: 0 41px;
+    font-size: 16px;
+    margin-bottom: 85px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-page .header__nav-item a {
+    color: #111111;
+  }
+
+  .catalog-page .header__nav-item--active {
+    border-color: #68b738;
+  }
+
+  .product:not(:nth-child(4n)) {
+    margin-right: 80px;
+  }
+
+  .product,
+  .product-show-more {
+    width: 245px;
+    margin-top: 140px;
+    padding: 165px 38px 0;
+    background-color: #f2f2f2;
+  }
+
+  .product__name {
+    padding: 0 20px;
+  }
+
+  .product__size,
+  .product__taste,
+  .product__price,
+  .product__button {
+    width: 169px;
+  }
+
+  .product-show-more {
+    background-color: transparent;
+  }
+
+  .product-show-more::before {
+    left: 93px;
+  }
+
+  .product-show-more__title {
+    padding: 0 18px;
+  }
+
+  .product-show-more__slogan {
+    padding: 0;
+  }
+}

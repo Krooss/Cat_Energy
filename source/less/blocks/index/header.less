@@ -1,5 +1,6 @@
 .header .container {
   position: relative;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .header__logo {
@@ -83,19 +84,15 @@
   }
 }
 
-.header .container::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  width: 280px;
-  height: 1px;
-  background-color: #e6e6e6;
-}
-
 @media (min-width: @tablet-width) {
   .header .container {
     display: flex;
     justify-content: space-between;
+    border-bottom: none;
+  }
+
+  .header__nav--closed {
+    display: block;
   }
 
   .header__nav-list {
